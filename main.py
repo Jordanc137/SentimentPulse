@@ -14,18 +14,19 @@ def obtener_datos(tema):
     return response.json().get('articles', [])
 
 def procesar_con_filtros(articulos, filtro_sentimiento=0):
-    lista_procesada = [] # Asegúrate de que termine en 'a'
+    lista_procesada = [] 
     for art in articulos:
         texto = art['title']
         polaridad = TextBlob(texto).sentiment.polarity
         
         if polaridad >= filtro_sentimiento:
+            # Todo esto debe llevar 3 niveles de tabulación (12 espacios)
             lista_procesada.append({
                 'titulo': texto,
                 'sentimiento': round(polaridad, 2),
                 'fuente': art['source']['name']
             })
-    return pd.DataFrame(lista_procesada) # Aquí estaba el error, usa 'lista_procesada'
+    return pd.DataFrame(lista_procesada)
 
 # 2. Ejecución del programa
 if __name__ == "__main__":
