@@ -1,4 +1,4 @@
-# 📈 SentimentPulse: Analizador de Sentimiento en Tiempo Real
+# SentimentPulse: Analizador de Sentimiento en Tiempo Real
 
 Proyecto desarrollado en Python para extraer, filtrar y analizar el sentimiento de noticias globales utilizando procesamiento de lenguaje natural (NLP).
 
